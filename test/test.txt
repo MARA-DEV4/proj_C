@@ -1,0 +1,76 @@
+
+POUR VOIR LA PARTIE DE CHAINE DE CARACTAIRE DANS LE COUR DE GERMAH
+VOIR PAGE 119
+
+---------------------------------------------------------------
+
+strlen (<chaine>) : fournit la longueur de la chaîne sans compter le '\0' final
+Exemple : char s[ ]= " Test";
+printf(“%d”,strlen(s)); //affiche 4
+
+---------------------------------------------------------------
+
+strcat(ch1, ch2) : ajoute ch2 à la fin de ch1. Le caractère ‘ ‘\\0’ de ch1 est écrasé par le 1er caractère de ch2
+Exemple : char ch1[20]=" Bonne ", *ch2=" chance ";
+strcat(ch1, ch2) ;
+printf(" %s", ch1); // affiche Bonne chance
+
+---------------------------------------------------------------
+
+strcmp(ch1, ch2): compare ch1 et ch2 lexico graphiquement et retourne une valeur :
+o nul si ch1 et ch2 sont identiques
+o négative si ch1 précède ch2
+o positive si ch1 suit ch2
+
+---------------------------------------------------------------
+
+strcpy(ch1, ch2) : copie ch2 dans ch1 y compris le caractère ‘ ‘\\0’
+Exemple : char ch[10];
+ strcpy(ch, " Bonjour ");
+ puts(ch); // affiche Bonjour
+
+---------------------------------------------------------------
+
+strchr(char *s, char c) : recherche la 1ère occurrence du caractère c dans la chaîne s et retourne un pointeur sur cette 1ère occurrence si c’est un caractère de s, sinon le pointeur NULL
+Exemple :
+char chaine[] = "Texte de test", *suiteChaine = NULL;
+suiteChaine = strchr(chaine, 'd');
+if (suiteChaine != NULL) // Si on a trouvé quelque chose
+printf("Voici la fin de la chaine a partir du premier d : %s", suiteChaine);
+// affiche Voici la fin de la chaine a partir du premier d : de test
+
+---------------------------------------------------------------
+
+//test_1.c
+-> getchar prend le premier char entrer..
+
+cour:
+getchar () et putchar (): permet la saisie ou l’affichage non formaté d’un seul caractère
+
+./test_1
+Taper une lettre et valider par entrée : haze
+Vous avez tapé la lettre h
+
+---------------------------------------------------------------
+
+//test_3.c
+
+->scanf ne prent pas l'espace s'il est au debut ou a la fin de la chiane de caractaire.
+
+->j'ai fait un test:
+"
+./test_3
+
+donner une chaine:  amekhroub
+9
+
+donner une autre chaine: zaka riyaa
+4
+amekhroubzaka
+"
+
+comme vous remarquez la deusiemme chaine contient un espace, donc la chine ne contient que "zaka"
+
+---------------------------------------------------------------
+
+//
